@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Home | Modern Living Essentials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth scrolling for a better user experience */
+        html { scroll-behavior: smooth; }
+        /* Custom font for a premium feel */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-900">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-amber-700">AURA HOME</div>
+            
+            <ul class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+                <li><a href="#" class="hover:text-amber-600 transition">Home</a></li>
+                <li><a href="#products" class="hover:text-amber-600 transition">Shop Collection</a></li>
+                <li><a href="#footer" class="hover:text-amber-600 transition">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <button class="bg-gray-900 text-white px-6 py-2 rounded-full text-sm hover:bg-amber-600 transition">Cart (0)</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative h-[500px] flex items-center bg-gray-200">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1600" 
+             alt="Modern Living Room" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+        <div class="relative container mx-auto px-6 text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">Minimalism <br>Redefined.</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-md text-gray-200">Discover hand-crafted furniture designed for comfort and timeless style.</p>
+            <a href="#products" class="inline-block bg-white text-black px-8 py-3 font-semibold hover:bg-amber-500 hover:text-white transition">Shop The Fall Sale</a>
+        </div>
+    </section>
+
+    <section id="products" class="container mx-auto px-6 py-20">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-bold">Featured Collection</h2>
+                <p class="text-gray-500 mt-2">Quality pieces that last a lifetime.</p>
+            </div>
+            <span class="text-amber-700 font-semibold cursor-pointer hover:underline mt-4 md:mt-0">View All Products &rarr;</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://www.stown.mx/cdn/shop/files/DSC03861_900x.jpg?v=1705279553" alt="Sienna Chair" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase">Best Seller</span>
+                </div>
+                <h3 class="font-semibold text-lg">Sienna Lounge Chair</h3>
+                <p class="text-gray-500 text-sm mb-3">Premium velvet and oak frame.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$299</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://www.glow.co.uk/media/catalog/product/3/d/3d-ceramic-moon-1.jpg" alt="Lunar Lamp" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="font-semibold text-lg">Lunar Ceramic Lamp</h3>
+                <p class="text-gray-500 text-sm mb-3">Warm ambient lighting for desks.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$85</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://i.etsystatic.com/36823276/r/il/b5cd01/4086164216/il_fullxfull.4086164216_9rn7.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="font-semibold text-lg">Solid Oak Side Table</h3>
+                <p class="text-gray-500 text-sm mb-3">Natural matte protective finish.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$145</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://naturalartisanhome.com/wp-content/uploads/2024/08/Seagrass-Belly-basket-3-W-1024x1024.webp" alt="Woven Basket" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-1 uppercase">Sale</span>
+                </div>
+                <h3 class="font-semibold text-lg">Artisan Seagrass Basket</h3>
+                <p class="text-gray-500 text-sm mb-3">Hand-woven eco-friendly storage.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$35 <span class="text-sm text-gray-400 line-through ml-2">$50</span></span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=600" alt="Velvet Chair" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="font-semibold text-lg">Velvet Accent Chair</h3>
+                <p class="text-gray-500 text-sm mb-3">Rich forest green fabric.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$320</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=600" alt="Work Desk" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="font-semibold text-lg">Scandi Work Desk</h3>
+                <p class="text-gray-500 text-sm mb-3">Minimalist birch plywood top.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$210</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://images.unsplash.com/photo-1581781870027-04212e231e96?auto=format&fit=crop&q=80&w=600" alt="Clay Vase" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="font-semibold text-lg">Organic Clay Vase</h3>
+                <p class="text-gray-500 text-sm mb-3">Matte finish hand-thrown pottery.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$55</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square mb-4">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=600" alt="Modular Shelf" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="font-semibold text-lg">Modular Wall Shelf</h3>
+                <p class="text-gray-500 text-sm mb-3">Industrial metal and pine wood.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-xl">$125</span>
+                    <button class="bg-gray-100 px-4 py-2 text-xs font-bold hover:bg-amber-600 hover:text-white transition">SHOP NOW</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-white border-t border-gray-100 py-16">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <h4 class="text-xl font-bold mb-4 tracking-tighter">AURA HOME</h4>
+                <p class="text-gray-500 max-w-xs mb-6">Sustainable furniture and decor for the modern sanctuary. Join our journey toward slower living.</p>
+                <div class="flex space-x-4">
+                    <span class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center cursor-pointer hover:bg-amber-100">IG</span>
+                    <span class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center cursor-pointer hover:bg-amber-100">FB</span>
+                    <span class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center cursor-pointer hover:bg-amber-100">TW</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Shop</h4>
+                <ul class="text-gray-500 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-black transition">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-black transition">Living Room</a></li>
+                    <li><a href="#" class="hover:text-black transition">Lighting</a></li>
+                    <li><a href="#" class="hover:text-black transition">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <ul class="text-gray-500 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-black transition">Shipping Info</a></li>
+                    <li><a href="#" class="hover:text-black transition">Returns</a></li>
+                    <li><a href="#" class="hover:text-black transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 border-t border-gray-100 mt-16 pt-8 text-center text-gray-400 text-xs">
+            &copy; 2026 Aura Home Design Co. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
