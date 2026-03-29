@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Bistro | Artisan Dining</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 2. CUSTOM CSS VARIABLES & BASE STYLES */
+        :root {
+            --primary-color: #d63384; /* A sophisticated berry red */
+            --dark-color: #1a1a1a;
+            --body-font: 'Poppins', sans-serif;
+            --heading-font: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: var(--heading-font);
+        }
+
+        /* 3. HERO SECTION CUSTOMIZATION */
+        .hero-section {
+            /* Linear gradient creates a dark overlay so text is readable over the image */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh; /* Takes up 90% of the viewport height */
+            color: white;
+        }
+
+        /* 4. MENU CARD HOVER EFFECTS */
+        .menu-card {
+            border: none;
+            transition: all 0.3s ease; /* Smooth transition for the hover effect */
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px); /* Lifts the card up slightly */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .menu-img {
+            height: 250px;
+            object-fit: cover; /* Ensures images don't stretch */
+        }
+
+        /* 5. UTILITY CLASSES */
+        .btn-brand {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 30px;
+            border: none;
+        }
+
+        .btn-brand:hover {
+            background-color: #b02a6b;
+            color: white;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: #aaa;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">LUMINA</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-1 fw-bold mb-3">Exquisite Flavors</h1>
+            <p class="fs-4 mb-4">Experience the art of modern Mediterranean cuisine.</p>
+            <a href="#menu" class="btn btn-brand btn-lg">Explore Menu</a>
+        </div>
+    </header>
+
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center display-4 mb-5">Chef's Recommendations</h2>
+            
+            <div class="row g-4">
+                
+                
+                <div class="col-md-4">
+                    <div class="card menu-card h-100 shadow-sm">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.cI74_POJhykQZikkRSulCAHaE8?w=1024&h=683&rs=1&pid=ImgDetMain&o=7&rm=3"class="card-img-top menu-img" alt="greek salade">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Greek Salad</h5>
+                            <p class="text-muted small">is one of the most famous Mediterranean cuisines. It is the perfect summer salad, with fresh flavors and a delicious drizzle of extra virgin olive oil. You’ll typically find chopped cucumbers, tomatoes, onion, black olives, and either crumbled feta cheese or a thick slice of feta cheese perched on top of the rest of the salad. </p>
+                            <h6 class="text-primary fw-bold">$10.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-card h-100 shadow-sm">
+                        <img src="https://i0.wp.com/www.honeywhatscooking.com/wp-content/uploads/2020/02/Creamy-Mushroom-Truffle-Papardelle50-2.jpg?fit=1440%2C957&ssl=1" class="card-img-top menu-img" alt="Pasta">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Truffle Pappardelle</h5>
+                            <p class="text-muted small">Hand-cut pasta with seasonal black truffles and parmesan cream.</p>
+                            <h6 class="text-primary fw-bold">$24.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1546039907-7fa05f864c02?auto=format&fit=crop&w=500" class="card-img-top menu-img" alt="Bowl">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Harvest Buddha Bowl</h5>
+                            <p class="text-muted small">Quinoa, roasted sweet potato, avocado, and tahini dressing.</p>
+                            <h6 class="text-primary fw-bold">$18.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-card h-100 shadow-sm">
+                        <img src="https://theplanetd.com/images/mediterranean-food-morrocan-tagine.jpeg" class="card-img-top menu-img" alt="Bowl">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Moroccan Tagine</h5>
+                            <p class="text-muted small"> is a meat dish, using rough-cut chunks of lamb or chicken. However, you will also find vegetable tagines, which use ingredients like potatoes, carrots, and onions. The ingredients are cooked in a thick, paste-like broth, and flavored with spices like cumin, paprika, and turmeric.</p>
+                            <h6 class="text-primary fw-bold">$20.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-card h-100 shadow-sm">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.MP0twZBg6JzBobsJPELTTQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top menu-img" alt="Dessert">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Berry Pavlova</h5>
+                            <p class="text-muted small">Crisp meringue topped with chantilly cream and forest berries.</p>
+                            <h6 class="text-primary fw-bold">$14.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-card h-100 shadow-sm">
+                        <img src="https://i.pinimg.com/originals/f0/16/ea/f016ea6f9dca1a7147fe2a7b5aee5fac.jpg" class="card-img-top menu-img" alt="Dessert">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold"> phyllo-wraped baked feta with honey</h5>
+                            <p class="text-muted small">Imagine creamy feta wrapped in delicate, flaky phyllo, then baked until gloriously golden and finished with a dreamy drizzle of honey, toasted sesame seeds, and fragrant thyme.</p>
+                            <h6 class="text-primary fw-bold">$13.00</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://th.bing.com/th/id/R.6002b3f7e82ebfa7889e676fe40f64ef?rik=%2bjKz%2bGv2t0znhQ&pid=ImgRaw&r=0" class="img-fluid rounded-4 shadow" alt="Our Kitchen">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-5 mb-4">Our Philosophy</h2>
+                    <p>At Lumina, we believe that great food starts with respect—respect for the ingredients, the farmers, and the guests. Our open kitchen concept allows you to see the passion behind every dish.</p>
+                    <p>We source 90% of our produce from local urban gardens, ensuring that what arrives on your plate is as fresh as it is beautiful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h2 class="display-5 mb-4">Join Us</h2>
+                    <p class="mb-5">Ready for an unforgettable meal? Book your table today.</p>
+                    
+                    <form class="text-start bg-white p-4 shadow rounded-4">
+                        <div class="mb-3">
+                            <label class="form-label fw-600">Name</label>
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="name@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" placeholder="Special requests..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-brand w-100">Reserve Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h3 class="text-white mb-4">LUMINA</h3>
+            <div class="mb-4">
+                <a href="#" class="text-white mx-2 text-decoration-none">Instagram</a>
+                <a href="#" class="text-white mx-2 text-decoration-none">Facebook</a>
+                <a href="#" class="text-white mx-2 text-decoration-none">Twitter</a>
+            </div>
+            <p class="small">&copy; 2026 Lumina Bistro. Crafted with love & Bootstrap.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
