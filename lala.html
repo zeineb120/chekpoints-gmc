@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg-card: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .pricing-card {
+            width: 320px;
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin: 0 0 10px 0;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: "✓";
+            margin-right: 10px;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+        }
+    </style>
+</head>
+<body>
+
+<div id="pricing-container"></div>
+
+<script>
+    // 3. Transformation en composant réutilisable (JavaScript)
+    function createPricingCard(title, price, features) {
+        const featureList = features.map(f => `<li>${f}</li>`).join('');
+        
+        return `
+            <div class="pricing-card">
+                <h2 class="title">${title}</h2>
+                <p class="price">$${price} <span>/mois</span></p>
+                <ul class="features">
+                    ${featureList}
+                </ul>
+                <button class="btn" onclick="alert('Souscription à : ${title}')">Choisir ce plan</button>
+            </div>
+        `;
+    }
+
+    // Exemple d'utilisation
+    const container = document.getElementById('pricing-container');
+    
+    container.innerHTML = createPricingCard(
+        "Plan Pro", 
+        "29.99", 
+        ["100 GB Stockage", "Support 24/7", "Accès API", "Rapports avancés"]
+    );
+</script>
+
+</body>
+</html>
